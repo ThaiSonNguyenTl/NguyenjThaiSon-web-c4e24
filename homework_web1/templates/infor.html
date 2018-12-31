@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Information</title>
+</head>
+<body>
+    {% for i in Users %}
+    {% endfor %}
+        {% if username == "huy" %}
+           {% for j in Users["huy"] %}
+           <h3>{{ Users["huy"][j] }}</h3>
+           {% endfor %}
+        {% elif username == "tuananh" %}
+        {% for j in Users["tuananh"] %}
+        <h3>{{ Users["tuananh"][j] }}</h3>
+            {% endfor %}
+        {% else %}
+            <h3>User not found</h3>
+        {% endif %}
+    
+</body>
+</html>
