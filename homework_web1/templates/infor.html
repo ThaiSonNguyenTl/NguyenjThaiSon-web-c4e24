@@ -8,16 +8,13 @@
 </head>
 <body>
     {% for i in Users %}
-    {% endfor %}
-        {% if username == "huy" %}
-           {% for j in Users["huy"] %}
-           <h3>{{ Users["huy"][j] }}</h3>
+        {% if username == i %}
+           {% for j in Users[username] %}
+           <h3>{{ Users[username][j] }}</h3>
            {% endfor %}
-        {% elif username == "tuananh" %}
-        {% for j in Users["tuananh"] %}
-        <h3>{{ Users["tuananh"][j] }}</h3>
-            {% endfor %}
-        {% else %}
+            {% endif %}
+    {% endfor %}
+        {% if username not in Users %}
             <h3>User not found</h3>
         {% endif %}
     
